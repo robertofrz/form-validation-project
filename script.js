@@ -3,7 +3,6 @@ const username = document.getElementById("username");
 const password1 = document.getElementById("password1");
 const password2 = document.getElementById("password2");
 const email = document.getElementById("email");
-const showPassword = document.querySelectorAll(".fa-solid");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -105,6 +104,7 @@ function setSuccess(element) {
 }
 
 function togglePasswordVisibility() {
+  const showPassword = document.querySelectorAll(".fa-solid");
   showPassword.forEach((item) =>
     item.addEventListener("click", (e) => {
       e.target.classList.toggle("fa-eye-slash");
